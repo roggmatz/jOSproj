@@ -137,10 +137,17 @@ public class jOSproj1 {
 		}
 	}
 
-	public static void loadtoJobTable(int pid, int timeReq, int ioBoolean, int position) {
+	public static void loadToJobTable(int pid, int timeReq, int ioBoolean, int position) {
 		jobTable[position][PID] = pid;
 		jobTable[position][TIME_REQUIRED] = timeReq;
 		jobTable[position][IO_BOOL] = ioBoolean;
+	}
+
+	public static void newLoadToReadyQ() {
+		int position, timeRequired, ioBool, startingAddress = 0;
+		for(int i = 0; i < jobCount(); i++) {
+			position = randGen(jobCount());
+			
 	}
 
 	public static void loadToReadyQ() {
